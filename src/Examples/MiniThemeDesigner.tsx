@@ -190,6 +190,7 @@ export class MiniThemeDesigner extends React.Component<
                 <TextField
                   value={primaryThemeColorPickerColor.str}
                   styles={colorPickerTextFieldStyles}
+                  onChange={this._onPrimaryThemeTextFieldChange}
                 />
               </Stack>
             </Stack>
@@ -227,6 +228,7 @@ export class MiniThemeDesigner extends React.Component<
                 <TextField
                   value={bodyTextColorPickerColor.str}
                   styles={colorPickerTextFieldStyles}
+                  onChange={this._onBodyTextTextFieldChange}
                 />
               </Stack>
             </Stack>
@@ -264,6 +266,7 @@ export class MiniThemeDesigner extends React.Component<
                 <TextField
                   value={bodyBackgroundColorPickerColor.str}
                   styles={colorPickerTextFieldStyles}
+                  onChange={this._onBodyBackgroundTextFieldChange}
                 />
               </Stack>
             </Stack>
@@ -406,6 +409,16 @@ export class MiniThemeDesigner extends React.Component<
     this._onColorChange(BaseSlots.primaryColor, color);
   };
 
+  private _onPrimaryThemeTextFieldChange = (ev: any, value?: string) => {
+    if (value) {
+      const color = getColorFromString(value);
+      if (color) {
+        this.setState({ primaryThemeColorPickerColor: color });
+        this._onColorChange(BaseSlots.primaryColor, color);
+      }
+    }
+  };
+
   private _updatePrimaryThemeColorPickerVisible = () => {
     this.setState({ primaryThemeColorPickerVisible: true });
   };
@@ -418,6 +431,16 @@ export class MiniThemeDesigner extends React.Component<
     this._onColorChange(BaseSlots.foregroundColor, color);
   };
 
+  private _onBodyTextTextFieldChange = (ev: any, value?: string) => {
+    if (value) {
+      const color = getColorFromString(value);
+      if (color) {
+        this.setState({ bodyTextColorPickerColor: color });
+        this._onColorChange(BaseSlots.foregroundColor, color);
+      }
+    }
+  };
+
   private _updateBodyTextColorPickerVisible = () => {
     this.setState({ bodyTextColorPickerVisible: true });
   };
@@ -428,6 +451,16 @@ export class MiniThemeDesigner extends React.Component<
   ) => {
     this.setState({ bodyBackgroundColorPickerColor: color });
     this._onColorChange(BaseSlots.backgroundColor, color);
+  };
+
+  private _onBodyBackgroundTextFieldChange = (ev: any, value?: string) => {
+    if (value) {
+      const color = getColorFromString(value);
+      if (color) {
+        this.setState({ bodyBackgroundColorPickerColor: color });
+        this._onColorChange(BaseSlots.backgroundColor, color);
+      }
+    }
   };
 
   private _makeNewTheme = () => {
