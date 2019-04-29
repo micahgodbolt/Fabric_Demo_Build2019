@@ -9,7 +9,7 @@ import {
   Toggle,
   Stack
 } from "office-ui-fabric-react";
-import { Example1 } from "./Examples";
+import { Example1, MiniThemeDesigner } from "./Examples";
 
 initializeIcons();
 
@@ -27,9 +27,9 @@ function App() {
     <Stack horizontal>
       <Stack.Item grow>
         <Pivot styles={pivotStyles}>
-          <PivotItem headerText="Demo 1">
+          <PivotItem headerText="Mini Theme Designer">
             <Customizer {...theme}>
-              <Example1 />
+              <MiniThemeDesigner />
             </Customizer>
           </PivotItem>
           <PivotItem headerText="Demo 2">
