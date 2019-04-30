@@ -43,14 +43,14 @@ function App() {
               <WeatherReportCard />
             </Customizer>
           </PivotItem>
-          <PivotItem headerText="Mini Theme Designer">
-            <Customizer {...theme}>
-              <MiniThemeDesigner />
-            </Customizer>
-          </PivotItem>
           <PivotItem headerText="Chat Interface">
             <Customizer {...theme}>
               <ChatInterface />
+            </Customizer>
+          </PivotItem>
+          <PivotItem headerText="Mini Theme Designer">
+            <Customizer {...theme}>
+              <MiniThemeDesigner />
             </Customizer>
           </PivotItem>
           <PivotItem headerText="Demo 5">
