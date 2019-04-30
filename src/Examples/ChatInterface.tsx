@@ -227,7 +227,9 @@ export class ChatInterface extends React.Component<{}, IChatInterfaceState> {
 
   private _onSendNewMessage = () => {
     const { chatBoxes, message } = this.state;
-    chatBoxes.push(<ChatBox alignment="end" text={message} />);
-    this.setState({ chatBoxes, message: "" });
+    if (message !== "") {
+      chatBoxes.push(<ChatBox alignment="end" text={message} />);
+      this.setState({ chatBoxes, message: "" });
+      }
   };
 }
