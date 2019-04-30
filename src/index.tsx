@@ -9,7 +9,12 @@ import {
   Toggle,
   Stack
 } from "office-ui-fabric-react";
-import { Example1, MiniThemeDesigner } from "./Examples";
+import {
+  ChatInterface,
+  Example1,
+  MiniThemeDesigner,
+  WeatherReportCard
+} from "./Examples";
 
 initializeIcons();
 
@@ -32,14 +37,14 @@ function App() {
               <MiniThemeDesigner />
             </Customizer>
           </PivotItem>
-          <PivotItem headerText="Demo 2">
+          <PivotItem headerText="Weather Report Card">
             <Customizer {...theme}>
-              <Example1 />
+              <WeatherReportCard />
             </Customizer>
           </PivotItem>
-          <PivotItem headerText="Demo 3">
+          <PivotItem headerText="Chat Interface">
             <Customizer {...theme}>
-              <Example1 />
+              <ChatInterface />
             </Customizer>
           </PivotItem>
           <PivotItem headerText="Demo 4">
