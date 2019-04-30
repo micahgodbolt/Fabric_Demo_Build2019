@@ -13,6 +13,7 @@ import {
   ChatInterface,
   Example1,
   MiniThemeDesigner,
+  SignUpSignInForm,
   WeatherReportCard
 } from "./Examples";
 
@@ -32,9 +33,9 @@ function App() {
     <Stack horizontal>
       <Stack.Item grow>
         <Pivot styles={pivotStyles}>
-          <PivotItem headerText="Mini Theme Designer">
+          <PivotItem headerText="Sign Up/Sign In Form">
             <Customizer {...theme}>
-              <MiniThemeDesigner />
+              <SignUpSignInForm />
             </Customizer>
           </PivotItem>
           <PivotItem headerText="Weather Report Card">
@@ -42,14 +43,14 @@ function App() {
               <WeatherReportCard />
             </Customizer>
           </PivotItem>
+          <PivotItem headerText="Mini Theme Designer">
+            <Customizer {...theme}>
+              <MiniThemeDesigner />
+            </Customizer>
+          </PivotItem>
           <PivotItem headerText="Chat Interface">
             <Customizer {...theme}>
               <ChatInterface />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 4">
-            <Customizer {...theme}>
-              <Example1 />
             </Customizer>
           </PivotItem>
           <PivotItem headerText="Demo 5">

@@ -24,7 +24,7 @@ export const WeatherReportCard = props => {
   const textStyle: ITextStyles = {
     root: {
       color: "rgba(51, 51, 51, 0.933)",
-      fontWeight: 400
+      fontWeight: 600
     }
   };
 
