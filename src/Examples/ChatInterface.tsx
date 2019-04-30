@@ -102,7 +102,7 @@ export class ChatInterface extends React.Component<{}, IChatInterfaceState> {
 
     const outerStackStyles: IStackStyles = {
       root: {
-        height: "500px",
+        height: "550px",
         width: "100%"
       }
     };
@@ -206,6 +206,7 @@ export class ChatInterface extends React.Component<{}, IChatInterfaceState> {
             placeholder="Type a new message"
             styles={messageTextFieldStyles}
             onChange={this._onMessageChange}
+            onKeyDown={this._onKeyDown}
             value={message}
           />
           <IconButton
@@ -217,6 +218,14 @@ export class ChatInterface extends React.Component<{}, IChatInterfaceState> {
       </Stack>
     );
   }
+
+  private _onKeyDown = (
+    ev: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (ev.keyCode === 13) {
+      this._onSendNewMessage();
+    }
+  };
 
   private _onMessageChange = (
     ev: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -230,6 +239,6 @@ export class ChatInterface extends React.Component<{}, IChatInterfaceState> {
     if (message !== "") {
       chatBoxes.push(<ChatBox alignment="end" text={message} />);
       this.setState({ chatBoxes, message: "" });
-      }
+    }
   };
 }
