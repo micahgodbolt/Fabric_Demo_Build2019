@@ -15,53 +15,43 @@ import {
   MiniThemeDesigner,
   OneDriveUI,
   SignUpSignInForm,
-  WeatherReportCard
+  WeatherReportCard,
+  ControlsExample
 } from "./Examples";
 
 initializeIcons();
 
 function App() {
-  const [fluent, setFluent] = React.useState(false);
   const pivotStyles = {
     root: {
       marginBottom: 20
     }
   };
 
-  const theme = fluent ? FluentCustomizations : {};
-
   return (
     <Stack horizontal>
       <Stack.Item grow>
         <Pivot styles={pivotStyles}>
+          <PivotItem headerText="Example Controls">
+            <ControlsExample />
+          </PivotItem>
+          <PivotItem headerText="Example Controls">
+            <OneDriveUI />
+          </PivotItem>
           <PivotItem headerText="Sign Up/Sign In Form">
-            <Customizer {...theme}>
-              <SignUpSignInForm />
-            </Customizer>
+            <SignUpSignInForm />
           </PivotItem>
           <PivotItem headerText="Weather Report Card">
-            <Customizer {...theme}>
-              <WeatherReportCard />
-            </Customizer>
+            <WeatherReportCard />
           </PivotItem>
           <PivotItem headerText="Chat Interface">
-            <Customizer {...theme}>
-              <ChatInterface />
-            </Customizer>
+            <ChatInterface />
           </PivotItem>
           <PivotItem headerText="Mini Theme Designer">
-            <Customizer {...theme}>
-              <MiniThemeDesigner />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="OneDrive UI">
-            <Customizer {...theme}>
-              <OneDriveUI />
-            </Customizer>
+            <MiniThemeDesigner />
           </PivotItem>
         </Pivot>
       </Stack.Item>
-      <Toggle label="Fluent" onChange={() => setFluent(!fluent)} />
     </Stack>
   );
 }
