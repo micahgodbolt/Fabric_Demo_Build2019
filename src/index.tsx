@@ -35,7 +35,7 @@ function App() {
           <PivotItem headerText="Example Controls">
             <ControlsExample />
           </PivotItem>
-          <PivotItem headerText="Example Controls">
+          <PivotItem headerText="OneDrive Demo">
             <OneDriveUI />
           </PivotItem>
           <PivotItem headerText="Sign Up/Sign In Form">
