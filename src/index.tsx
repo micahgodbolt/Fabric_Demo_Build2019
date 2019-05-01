@@ -35,9 +35,6 @@ function App() {
           <PivotItem headerText="Example Controls">
             <ControlsExample />
           </PivotItem>
-          <PivotItem headerText="Example Controls">
-            <OneDriveUI />
-          </PivotItem>
           <PivotItem headerText="Sign Up/Sign In Form">
             <SignUpSignInForm />
           </PivotItem>
@@ -46,6 +43,9 @@ function App() {
           </PivotItem>
           <PivotItem headerText="Chat Interface">
             <ChatInterface />
+          </PivotItem>
+          <PivotItem headerText="OneDrive UI">
+            <OneDriveUI />
           </PivotItem>
           <PivotItem headerText="Mini Theme Designer">
             <MiniThemeDesigner />
