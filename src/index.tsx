@@ -14,68 +14,43 @@ import {
   Example1,
   MiniThemeDesigner,
   SignUpSignInForm,
-  WeatherReportCard
+  WeatherReportCard,
+  ControlsExample
 } from "./Examples";
 
 initializeIcons();
 
 function App() {
-  const [fluent, setFluent] = React.useState(false);
   const pivotStyles = {
     root: {
       marginBottom: 20
     }
   };
 
-  const theme = fluent ? FluentCustomizations : {};
-
   return (
     <Stack horizontal>
       <Stack.Item grow>
         <Pivot styles={pivotStyles}>
+          <PivotItem headerText="Example Controls">
+            <ControlsExample />
+          </PivotItem>
           <PivotItem headerText="Sign Up/Sign In Form">
-            <Customizer {...theme}>
-              <SignUpSignInForm />
-            </Customizer>
+            <SignUpSignInForm />
           </PivotItem>
           <PivotItem headerText="Weather Report Card">
-            <Customizer {...theme}>
-              <WeatherReportCard />
-            </Customizer>
+            <WeatherReportCard />
           </PivotItem>
           <PivotItem headerText="Chat Interface">
-            <Customizer {...theme}>
-              <ChatInterface />
-            </Customizer>
+            <ChatInterface />
           </PivotItem>
           <PivotItem headerText="Mini Theme Designer">
-            <Customizer {...theme}>
-              <MiniThemeDesigner />
-            </Customizer>
+            <MiniThemeDesigner />
           </PivotItem>
           <PivotItem headerText="Demo 5">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 6">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 7">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 8">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
+            <Example1 />
           </PivotItem>
         </Pivot>
       </Stack.Item>
-      <Toggle label="Fluent" onChange={() => setFluent(!fluent)} />
     </Stack>
   );
 }
