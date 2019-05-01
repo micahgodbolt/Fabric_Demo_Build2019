@@ -13,6 +13,7 @@ import {
   ChatInterface,
   Example1,
   MiniThemeDesigner,
+  OneDriveUI,
   SignUpSignInForm,
   WeatherReportCard
 } from "./Examples";
@@ -53,24 +54,9 @@ function App() {
               <MiniThemeDesigner />
             </Customizer>
           </PivotItem>
-          <PivotItem headerText="Demo 5">
+          <PivotItem headerText="OneDrive UI">
             <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 6">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 7">
-            <Customizer {...theme}>
-              <Example1 />
-            </Customizer>
-          </PivotItem>
-          <PivotItem headerText="Demo 8">
-            <Customizer {...theme}>
-              <Example1 />
+              <OneDriveUI />
             </Customizer>
           </PivotItem>
         </Pivot>
