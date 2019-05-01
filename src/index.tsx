@@ -13,6 +13,7 @@ import {
   ChatInterface,
   Example1,
   MiniThemeDesigner,
+  OneDriveUI,
   SignUpSignInForm,
   WeatherReportCard,
   ControlsExample
@@ -34,6 +35,9 @@ function App() {
           <PivotItem headerText="Example Controls">
             <ControlsExample />
           </PivotItem>
+          <PivotItem headerText="Example Controls">
+            <OneDriveUI />
+          </PivotItem>
           <PivotItem headerText="Sign Up/Sign In Form">
             <SignUpSignInForm />
           </PivotItem>
@@ -45,9 +49,6 @@ function App() {
           </PivotItem>
           <PivotItem headerText="Mini Theme Designer">
             <MiniThemeDesigner />
-          </PivotItem>
-          <PivotItem headerText="Demo 5">
-            <Example1 />
           </PivotItem>
         </Pivot>
       </Stack.Item>
