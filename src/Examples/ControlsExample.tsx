@@ -17,11 +17,7 @@ export const ControlsExample = () => {
   const theme = fluent ? FluentCustomizations : {};
   return (
     <Customizer {...theme}>
-      <Stack
-        styles={{ root: { maxWidth: 800, margin: "0 auto" } }}
-        horizontal
-        gap={60}
-      >
+      <Stack styles={{ root: { maxWidth: 800 } }} horizontal gap={60}>
         <Stack grow>
           <TextField suffix="suffix" label="Standard" />
           <TextField label="Disabled" disabled={true} />
@@ -106,7 +102,7 @@ export const ControlsExample = () => {
         </Stack>
       </Stack>
       <Toggle
-        styles={{ root: { position: "absolute", top: 20, right: 0 } }}
+        styles={{ root: { position: "absolute", top: 20, right: 20 } }}
         label="Fluent"
         onChange={() => setFluent(!fluent)}
       />

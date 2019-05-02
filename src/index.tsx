@@ -14,7 +14,6 @@ import {
   Example1,
   MiniThemeDesigner,
   OneDriveUI,
-  SignUpSignInForm,
   WeatherReportCard,
   ControlsExample
 } from "./Examples";
@@ -37,9 +36,6 @@ function App() {
           </PivotItem>
           <PivotItem headerText="OneDrive Demo">
             <OneDriveUI />
-          </PivotItem>
-          <PivotItem headerText="Sign Up/Sign In Form">
-            <SignUpSignInForm />
           </PivotItem>
           <PivotItem headerText="Weather Report Card">
             <WeatherReportCard />
