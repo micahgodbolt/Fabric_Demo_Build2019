@@ -102,7 +102,7 @@ export const ControlsExample = () => {
         </Stack>
       </Stack>
       <Toggle
-        styles={{ root: { position: "absolute", top: 20, right: 20 } }}
+        styles={{ root: { position: "absolute", top: 30, right: 20 } }}
         label="Fluent"
         onChange={() => setFluent(!fluent)}
       />
