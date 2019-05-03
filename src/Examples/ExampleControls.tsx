@@ -12,9 +12,9 @@ import {
 } from "office-ui-fabric-react";
 import { FluentCustomizations } from "@uifabric/fluent-theme";
 
-export const ControlsExample = () => {
-  const [fluent, setFluent] = React.useState(false);
-  const theme = fluent ? FluentCustomizations : {};
+export const ExampleControls = () => {
+  const [isFluent, setFluent] = React.useState(false);
+  const theme = isFluent ? FluentCustomizations : {};
   return (
     <Customizer {...theme}>
       <Stack styles={{ root: { maxWidth: 800 } }} horizontal gap={60}>
@@ -104,7 +104,7 @@ export const ControlsExample = () => {
       <Toggle
         styles={{ root: { position: "absolute", top: 20, right: 20 } }}
         label="Fluent"
-        onChange={() => setFluent(!fluent)}
+        onChange={() => setFluent(!isFluent)}
       />
     </Customizer>
   );

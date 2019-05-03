@@ -11,11 +11,11 @@ import {
 } from "office-ui-fabric-react";
 import {
   ChatInterface,
-  Example1,
+  Sandbox,
   MiniThemeDesigner,
   OneDriveUI,
   WeatherReportCard,
-  ControlsExample
+  ExampleControls
 } from "./Examples";
 
 initializeIcons();
@@ -32,10 +32,13 @@ function App() {
       <Stack.Item grow>
         <Pivot styles={pivotStyles}>
           <PivotItem headerText="Example Controls">
-            <ControlsExample />
+            <ExampleControls />
           </PivotItem>
           <PivotItem headerText="OneDrive Demo">
             <OneDriveUI />
+          </PivotItem>
+          <PivotItem headerText="Mini Theme Designer">
+            <MiniThemeDesigner />
           </PivotItem>
           <PivotItem headerText="Weather Report Card">
             <WeatherReportCard />
@@ -43,8 +46,8 @@ function App() {
           <PivotItem headerText="Chat Interface">
             <ChatInterface />
           </PivotItem>
-          <PivotItem headerText="Mini Theme Designer">
-            <MiniThemeDesigner />
+          <PivotItem headerText="Sandbox">
+            <Sandbox />
           </PivotItem>
         </Pivot>
       </Stack.Item>
