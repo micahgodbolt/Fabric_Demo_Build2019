@@ -139,9 +139,11 @@ export class MiniThemeDesigner extends React.Component<
 
     // Token definition
     const outerStackTokens: ICardTokens = { childrenGap: 30 };
-    const colorPickerCardTokens: ICardTokens = { maxWidth: 500 };
+    const colorPickerCardTokens: ICardTokens = {
+      minWidth: "auto",
+      maxWidth: 500
+    };
     const colorSectionHeaderTokens: IStackTokens = { childrenGap: 10 };
-    const colorPickerSectionStackTokens: IStackTokens = { childrenGap: 50 };
     const colorPickerIndividualStackTokens: IStackTokens = { childrenGap: 6 };
     const samplesCardTokens: ICardTokens = { maxWidth: 1200 };
     const samplesContainerStackTokens: IStackTokens = { childrenGap: 50 };
@@ -173,7 +175,7 @@ export class MiniThemeDesigner extends React.Component<
               horizontal
               horizontalAlign="space-between"
               verticalAlign="center"
-              tokens={colorPickerSectionStackTokens}
+              tokens={colorSectionHeaderTokens}
             >
               <Text>Primary theme color</Text>
 
