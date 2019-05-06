@@ -8,7 +8,10 @@ import {
   Checkbox,
   Toggle,
   Stack,
-  Customizer
+  Customizer,
+  Breadcrumb,
+  CompoundButton,
+  SpinButton
 } from "office-ui-fabric-react";
 import { FluentCustomizations } from "@uifabric/fluent-theme";
 
@@ -18,11 +21,20 @@ export const ExampleControls = () => {
   return (
     <Customizer {...theme}>
       <Stack styles={{ root: { maxWidth: 800 } }} horizontal gap={60}>
-        <Stack grow>
-          <TextField suffix="suffix" label="Standard" />
+        <Stack gap={20} maxWidth={250} grow>
+          <TextField prefix="http://" label="Standard" />
           <TextField label="Disabled" disabled={true} />
-          <TextField label="Required " required={true} />
           <TextField label="With error message" errorMessage="Error message" />
+          <SpinButton
+            defaultValue="0"
+            label={"Basic SpinButton:"}
+            min={0}
+            max={100}
+            step={1}
+            iconProps={{ iconName: "IncreaseIndentLegacy" }}
+            incrementButtonAriaLabel={"Increase value by 1"}
+            decrementButtonAriaLabel={"Decrease value by 1"}
+          />
         </Stack>
         <Stack grow gap={20}>
           <Toggle
@@ -41,32 +53,32 @@ export const ExampleControls = () => {
                 key: "B",
                 text: "Option B",
                 checked: true
-              }
-            ]}
-            label="Pick one"
-            required={true}
-          />
-          <ChoiceGroup
-            options={[
+              },
               {
                 key: "C",
                 text: "Option C",
                 disabled: true
-              },
-              {
-                key: "D",
-                text: "Option D",
-                checked: true,
-                disabled: true
               }
             ]}
             label="Pick one"
             required={true}
           />
+
+          <Checkbox label="Standard checkbox" />
+          <Checkbox disabled label="Standard checkbox" />
         </Stack>
         <Stack gap={20}>
           <DefaultButton>Hello World</DefaultButton>
           <PrimaryButton>Hello World</PrimaryButton>
+          <CompoundButton secondaryText="You can create a new account here.">
+            Create account
+          </CompoundButton>
+          <CompoundButton
+            primary
+            secondaryText="You can create a new account here."
+          >
+            Create account
+          </CompoundButton>
           <DefaultButton
             id="ContextualMenuBasicExample"
             text="Click for ContextualMenu"
@@ -97,12 +109,30 @@ export const ExampleControls = () => {
               ]
             }}
           />
-          <Checkbox label="Standard checkbox" />
-          <Checkbox disabled label="Standard checkbox" />
         </Stack>
       </Stack>
+      <Stack>
+        <Breadcrumb
+          items={[
+            { text: "Files", key: "Files", onClick: () => null },
+            { text: "This is folder 1", key: "f1", onClick: () => null },
+            { text: "This is folder 2", key: "f2", onClick: () => null },
+            { text: "This is folder 3", key: "f3", onClick: () => null },
+            { text: "This is folder 4", key: "f4", onClick: () => null },
+            {
+              text: "This is folder 5",
+              key: "f5",
+              onClick: () => null,
+              isCurrentItem: true
+            }
+          ]}
+          maxDisplayedItems={5}
+          ariaLabel={"Breadcrumb with static width"}
+          overflowAriaLabel={"More items"}
+        />
+      </Stack>
       <Toggle
-        styles={{ root: { position: "absolute", top: 30, right: 20 } }}
+        styles={{ root: { position: "absolute", bottom: 30, right: 20 } }}
         label="Fluent"
         onChange={() => setFluent(!isFluent)}
       />
