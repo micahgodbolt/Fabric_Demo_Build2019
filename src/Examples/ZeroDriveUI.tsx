@@ -146,8 +146,8 @@ export const OneDriveUI = props => {
       buttonStyles: commandBarWaffleButtonStyles
     },
     {
-      key: "OneDrive",
-      name: "OneDrive",
+      key: "ZeroDrive",
+      name: "ZeroDrive",
       buttonStyles: {
         root: {
           backgroundColor: "black",
@@ -375,7 +375,7 @@ export const OneDriveUI = props => {
   // Nav related props
   const navGroups: INavLinkGroup[] = [
     {
-      name: "OneDrive",
+      name: "ZeroDrive",
       links: [
         {
           name: "Files",

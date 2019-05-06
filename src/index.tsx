@@ -13,7 +13,7 @@ import {
   ChatInterface,
   Sandbox,
   MiniThemeDesigner,
-  OneDriveUI,
+  ZeroDriveUI,
   WeatherReportCard,
   ExampleControls
 } from "./Examples";
@@ -34,8 +34,8 @@ function App() {
           <PivotItem headerText="Example Controls">
             <ExampleControls />
           </PivotItem>
-          <PivotItem headerText="OneDrive Demo">
-            <OneDriveUI />
+          <PivotItem headerText="ZeroDrive Demo">
+            <ZeroDriveUI />
           </PivotItem>
           <PivotItem headerText="Mini Theme Designer">
             <MiniThemeDesigner />
