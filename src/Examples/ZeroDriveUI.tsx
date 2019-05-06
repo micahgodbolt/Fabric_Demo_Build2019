@@ -20,7 +20,7 @@ import {
   ITextFieldStyles
 } from "office-ui-fabric-react";
 
-export const OneDriveUI = props => {
+export const ZeroDriveUI = props => {
   // Component styles
   const containerStackStyles: IStackStyles = {
     root: {
