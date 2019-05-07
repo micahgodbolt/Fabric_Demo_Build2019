@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
+    "@uifabric/azure-themes": "0.1.8",
     "@uifabric/experiments": "6.74.2",
     "@uifabric/fluent-theme": "0.16.6",
     "@uifabric/react-cards": "0.3.1",
